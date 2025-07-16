@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body  style="background-color: black;color :white; font-family: Arial, sans-serif;">
+
+    <h2>Amazing Nature</h2>
+    <ul id ="images">
+        <li><img width = "200px" id = "photoshop" src="https://wttc.org/getContentAsset/e432232d-3ba6-490d-8b5d-916510c65386/489c4c4e-cfe8-42ba-91b1-27fe878007dd/nature-landscapes-and-sunrise.webp?language=en" alt="photoshop"></li>
+
+        <li><img width = "200px" id = "yellow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLGZx8oQItCIeqzG5AJA-Kn03dvYGgH_d5mQ&s" alt=""></li>
+
+        <li><img width = "200px"    id ="red"   src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkoj4BZmD1KH2YPBIYWDrVUvthRhW_ik8Dg&s"alt=""></li>
+
+       
+        <li> <a href="https://google.com" id = "google">Google</a></li>
+    </ul>
+    
+</body>
+<script>
+    //document.getElementById('photoshop').onclick = function() {
+        //alert('This is a beautiful landscape!');
+    //};
+    //attachEvent
+    //jQuery-on
+
+     //type,timestamp , defaultPrevent,,
+    //target ,to element ,source element
+    //cinet x  ,clinet y , (position related)
+    //alt key,ctrl key , shift key ,key code 
+
+    //document.getElementById('images').addEventListener('click',function(e){
+        //console.log ("url is clicked")
+        
+    //},false)
+
+    //document.getElementById('yellow').addEventListener('click',function(e){
+        //console.log ("landscape")
+        //e.stopPropagation()
+        
+    //},true)
+
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+        removeIt.remove();
+
+        }
+        
+
+        
+
+    })
+
+
+   
+
+    
+
+</script>
+</html>

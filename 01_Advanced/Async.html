@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+
+<script>
+
+    const SayHitesh = function(){
+        console.log("Anjali")
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML="Best Js Series"
+    }
+    const changeMe = setTimeout(changeText,2000)//this function do your time only one time
+    document.querySelector("button").addEventListener('click',(e)=>{
+        clearTimeout(changeMe)
+        console.log("Stopped")
+
+    })
+
+
+</script>
+</html>
